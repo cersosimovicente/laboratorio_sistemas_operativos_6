@@ -70,4 +70,69 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
 ### Pregunta
 Identifica los posibles errores en la configuración del servidor DHCP y propone las soluciones adecuadas.
 ## Ejercicio 2: DNS
+Situación
+Un administrador configuró el archivo de zona para un dominio, pero la resolución de nombres no está funcionando correctamente. Aquí está el archivo de zona:
+```plaintext
+$TTL 86400
+@   IN  SOA ns1.example.com. admin.example.com. (
+                2023060601 ; Serial
+                3600       ; Refresh
+                1800       ; Retry
+                1209600    ; Expire
+                86400 )    ; Minimum TTL
+
+@       IN  NS  ns1.example.com.
+@       IN  NS  ns2.example.com.
+@       IN  A   192.168.1.1
+www     IN  A   192.168.1.2
+mail    IN  MX  10 mail.example.com.
+ftp     IN  A   192.168.1.3
+```
+Pregunta
+Identifica los errores en el archivo de zona y corrígilos.
+### Ejercicio 3: DHCP
+Situación
+En una red, el administrador configuró el servidor DHCP y algunas máquinas con direcciones IP estáticas. Aquí está la configuración del servidor DHCP:
+```text
+# Configuración del Servidor DHCP
+subnet 10.0.0.0 netmask 255.255.255.0 {
+    range 10.0.0.100 10.0.0.200;
+    option routers 10.0.0.1;
+    option domain-name-servers 10.0.0.2, 10.0.0.3;
+    default-lease-time 600;
+    max-lease-time 7200;
+}
+```
+Las configuraciones IP estáticas de algunas máquinas:
+
+Máquina A: 10.0.0.101
+Máquina B: 10.0.0.150
+Máquina C: 10.0.0.199
+
+Pregunta
+Identifica los problemas en la configuración y propone una solución adecuada.
+
+### Ejercicio 4: DNS
+Situación
+Un administrador configuró el archivo de zona DNS para el manejo de correo, pero los correos electrónicos no están llegando correctamente. Aquí está la configuración:
+```textplain
+$TTL 86400
+@   IN  SOA ns1.example.com. admin.example.com. (
+                2023060601 ; Serial
+                3600       ; Refresh
+                1800       ; Retry
+                1209600    ; Expire
+                86400 )    ; Minimum TTL
+
+@       IN  NS  ns1.example.com.
+@       IN  NS  ns2.example.com.
+@       IN  A   192.168.1.1
+www     IN  A   192.168.1.2
+mail    IN  A   192.168.1.3
+@       IN  MX  10 mail.example.com.
+ftp     IN  A   192.168.1.3
+```
+Pregunta
+Encontrá y corrigí los errores en la configuración del archivo de zona DNS.
+
 
