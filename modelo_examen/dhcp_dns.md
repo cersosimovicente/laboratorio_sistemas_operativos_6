@@ -89,7 +89,7 @@ mail    IN  MX  10 mail.example.com.
 ftp     IN  A   192.168.1.3
 ```
 Pregunta
-Identifica los errores en el archivo de zona y corrígilos.
+Identifica los errores en el archivo de zona y corregilos.
 ### Ejercicio 3: DHCP
 Situación
 En una red, el administrador configuró el servidor DHCP y algunas máquinas con direcciones IP estáticas. Aquí está la configuración del servidor DHCP:
