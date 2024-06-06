@@ -54,6 +54,20 @@
  - d) El cliente DNS
 
 
-
-
+## Ejercicio 1: DHCP 
+Situación
+Un administrador de red configuró un servidor DHCP, pero los dispositivos en la red no pueden obtener direcciones IP. Configuración del servidor DHCP:
+```plaintext
+# Configuración del Servidor DHCP
+subnet 192.168.1.0 netmask 255.255.255.0 {
+    range 192.168.1.10 192.168.1.50;
+    option routers 192.168.1.1;
+    option domain-name-servers 8.8.8.8, 8.8.4.4;
+    default-lease-time 600;
+    max-lease-time 7200;
+}
+```
+### Pregunta
+Identifica los posibles errores en la configuración del servidor DHCP y propone las soluciones adecuadas.
+## Ejercicio 2: DNS
 
