@@ -81,7 +81,7 @@ $TTL 86400
                 1209600    ; Expire
                 86400 )    ; Minimum TTL
 
-@       IN  NS  ns1.example.com.
+@       IN  NS  ns1.example.com
 @       IN  NS  ns2.example.com.
 @       IN  A   192.168.1.1
 www     IN  A   192.168.1.2
@@ -129,7 +129,7 @@ $TTL 86400
 @       IN  A   192.168.1.1
 www     IN  A   192.168.1.2
 mail    IN  A   192.168.1.3
-@       IN  MX  10 mail.example.com.
+@.       IN  MX  10 mail.example.com.
 ftp     IN  A   192.168.1.3
 ```
 Pregunta
