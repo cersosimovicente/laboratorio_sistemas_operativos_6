@@ -59,7 +59,7 @@ Situación
 Un administrador de red configuró un servidor DHCP, pero los dispositivos en la red no pueden obtener direcciones IP. Configuración del servidor DHCP:
 ```plaintext
 # Configuración del Servidor DHCP
-subnet 192.168.1.0 netmask 255.255.255.0 {
+subnet 192.168.1.0 netmask 255.255.255.128 {
     range 192.168.1.10 192.168.1.50;
     option routers 192.168.1.1;
     option domain-name-servers 8.8.8.8, 8.8.4.4;
