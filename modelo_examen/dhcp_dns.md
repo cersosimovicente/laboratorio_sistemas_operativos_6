@@ -136,3 +136,48 @@ Pregunta
 Encontrá y corrigí los errores en la configuración del archivo de zona DNS.
 
 
+### Ejercicio 1: SSH
+Escenario 1: Problema de Conexión
+Un administrador de red configuró un servidor SSH, pero los dispositivos en la red no pueden conectarse como super usuario. Aquí está la configuración actual del archivo /etc/ssh/sshd_config:
+```sh
+Port 22222
+PermitRootLogin no
+PasswordAuthentication yes
+```
+Preguntas:
+
+¿Cuál es el problema con esta configuración que podría impedir que los dispositivos se conecten?
+¿Qué cambios sugerirías para solucionar este problema?
+Después de hacer los cambios, ¿qué comando usarías para reiniciar el servicio SSH en un sistema basado en Linux?
+
+### Escenario 2: Seguridad y Autenticación
+El administrador quiere mejorar la seguridad del servidor SSH deshabilitando la autenticación por contraseña y permitiendo solo la autenticación por clave pública. Aquí está la configuración actual:
+```sh
+Port 22
+PermitRootLogin yes
+PasswordAuthentication yes
+PubkeyAuthentication no
+```
+Preguntas:
+
+Identifica los errores en esta configuración relacionados con la seguridad.
+Modifica la configuración para permitir solo la autenticación por clave pública.
+¿Qué pasos adicionales deben seguir los usuarios para conectarse al servidor SSH después de realizar estos cambios?
+
+### Escenario 2: Tiempo de Inactividad
+El servidor SSH desconecta a los usuarios después de un corto período de inactividad, lo cual es molesto para los usuarios. Aquí está la configuración actual:
+```sh
+Port 22
+PermitRootLogin yes
+PasswordAuthentication yes
+ClientAliveInterval 60
+ClientAliveCountMax 2
+```
+Preguntas:
+
+Identifica los parámetros que están causando que los usuarios sean desconectados rápidamente.
+Modifica la configuración para permitir un período de inactividad más largo antes de desconectar a los usuarios.
+¿Qué valor sugerirías para ClientAliveInterval y ClientAliveCountMax para mejorar la experiencia del usuario sin comprometer la seguridad?
+
+
+
