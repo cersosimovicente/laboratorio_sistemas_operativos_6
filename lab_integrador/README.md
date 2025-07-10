@@ -24,6 +24,8 @@ A través de los grupos, se trabajará con los siguientes servicios:
 - Servidor SSH con clave pública
 - Firewall y NAT
 - Monitor de red (Nagios, Zabbix, etc.)
+## Forma de entrega
+- Unico repositorio en github, con carpetas individuales por grupo.
 
 ## Evaluación 
 El trabajo será evaluado por:
