@@ -22,10 +22,4 @@ Implementar un servidor de nombres de dominio (DNS) y un servidor de archivos ac
   - Comandos utilizados
   - Archivos de configuración modificados
   - Capturas de pantalla
-  - Pruebas de conectividad e integraciónar un servidor DNS que resuelva nombres internos y externos.
-2. Instalar y configurar un servidor FTP o Samba para compartir archivos con otros grupos.
-3. Probar el funcionamiento de ambos servicios desde otras máquinas.
-4. Integrarse con:
-   - Grupo 2 (servidor web y correo)
-   - Grupo 3 (DHCP y SSH)
-   - Grupo 4 (firewall y monitoreo)
+  - Pruebas de conectividad e integración
